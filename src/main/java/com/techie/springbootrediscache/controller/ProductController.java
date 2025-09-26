@@ -15,6 +15,11 @@ public class ProductController {
     public ProductController(ProductService productService) {
         this.productService = productService;
     }
+    
+    @GetMapping("/")
+    public String home() {
+        return "✅ Witty Wallets Spring Boot Redis Cache App is running!";
+    }
 
     @PostMapping
     @ResponseStatus(value = HttpStatus.CREATED)
